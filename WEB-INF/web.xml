@@ -1,0 +1,37 @@
+<web-app>
+	<servlet>
+		<servlet-name>MyServlet</servlet-name>
+		<servlet-class>yue.j2ee.servlet.MyServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<!-- 车辆图标 -->
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/MyServletf</url-pattern>
+	</servlet-mapping>
+
+
+	<servlet>
+		<servlet-name>MyServlety</servlet-name>
+		<servlet-class>yue.j2ee.servlet.MyServlety</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyServlety</servlet-name>
+		<url-pattern>/MyServleta</url-pattern>
+	</servlet-mapping>
+
+</web-app>
+
+
+<!-- <web-app>
+	<servlet>
+		<servlet-name>MyServlety</servlet-name>
+		<servlet-class>yue.j2ee.servlet.MyServlety</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MyServlety</servlet-name>
+		<url-pattern>/MyServlety</url-pattern>
+	</servlet-mapping>
+</web-app> -->

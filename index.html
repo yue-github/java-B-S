@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="Author" content="CHINA-吴同岳">
+    <meta name="Keywords" content="寻位停 迅速找车位 停车困难 解决方案 城市停车 农村停车 旅游停车 快速找到车位">
+    <meta name="Description" content="停车难解决平台 城市 农村 寻位停是一个致力解决日益增多的车辆无法准确停放问题的平台 让交警严查贴罚单事情不靠近我们">
+	<meta name="viewport" content="width=device-width,user-scalable=0,initial-scale=1.0">
+	<link rel="shortcut icon" href="FPMain/img/p-logo.png">
+	<script>
+		var screenW=window.screen.availWidth;
+		var documentW=document.documentElement.clientWidth;
+		// 为pc端访问提供后门
+		if(screenW>640&&documentW>640){
+			alert("请在屏幕宽度小于640像素的移动设备登陆浏览本app");
+			window.location="FPMain/phoneFail.html";
+		}
+	</script>
+	<title>协议</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		-webkit-box-sizing:border-box;
+		box-sizing:border-box;
+		-webkit-tap-highlight-color:transparent;
+	}
+	#main{
+		width:100vw;
+		height:100vh;
+		max-width: 640px;
+		min-width:300px;
+		min-height:100vh;
+		position:relative;
+		margin:0 auto;
+	}
+	#main > .bg{
+		width:100%;
+		height:100%;
+		background:#F0F0F0;
+		opacity:0.7;
+		position:absolute;
+	}
+	#main > .rule{
+		width:90%;
+		height:60%;
+		position:absolute;
+		top:20%;
+		left:5%;
+		background:#fff;
+		border-radius:20px;
+		overflow:hidden;
+	}
+	#main > .rule > .top{
+		width:100%;
+		height:76%;
+		border-radius:20px;
+	}
+	#main > .rule > .top > .title{
+		width:100%;
+		font-size:1.5rem;
+		text-align: center;
+		padding-top:1rem;
+	}
+	#main > .rule > .top > .titleP{
+		width:80%;
+		margin:1rem 0 1rem 10%;
+		border-bottom:1px solid #E0E0EE;
+	}
+	#main > .rule > .ruleP{
+		width:90%;
+		margin:1rem 0 0.7rem 5%;
+		border-bottom:1px solid #E0E0EE;
+	}
+	#main > .rule > .bottom{
+		width:90%;
+		height:12%;
+		margin-left:5%;
+		margin-top:3%;
+	}
+	#main > .rule > .bottom > .left,
+	#main > .rule > .bottom > .right{
+		width:47.5%;
+		height:100%;
+		border:1px solid #ccc;
+		border-radius:10px;
+		float:left;
+		position:relative;
+		background:#F0F0F0;
+		display:flex;
+		align-items:center;
+		justify-content: center;
+	}
+ 
+	#main > .rule > .bottom > .right{
+		float:right;
+	}
+
+	/*判断是横屏时的状态*/
+	#yue_screen_h{
+		z-index:100000;
+		width:100%;
+		height:100%;
+		background:#000;
+		position:absolute;
+		left:0;
+		top:0;
+		line-height:50vh;
+		display:none;
+	}
+	#yue_screen_h > .screen_bg{
+		width:100%;
+		height:100%;
+		position:absolute;
+		background:url('FPMain/home/img/screen_h.jpg') no-repeat;
+		background-size:100%;
+	}
+	#yue_screen_h > span{
+		color:#9b72ae;
+		position:relative;
+		font-size:2rem;
+		margin-left:55%;
+	}
+
+	</style>
+</head>
+<body>
+<!-- 横屏状态 -->
+<div id="yue_screen_h">
+	<div class="screen_bg"></div>
+	<span>竖屏下体验更佳</span>
+</div>
+	<div id="main">
+		<div class="bg"></div>
+		<div class="rule">
+			<div class="top">
+				<div class="title">相关协议</div>
+				<p class="titleP"></p>
+				<div class="content">
+					&nbsp;<span>1.允许本平台对您当前位置进行定位</span><br>
+					&nbsp;<span>2.欢迎指出本平台的不足之处</span>
+				</div>
+			</div>
+			<p class="ruleP"></p>
+			<div class="bottom">
+				<div class="left"><span>取消</span></div>
+				<div class="right"><span>同意</span></div>
+			</div>
+		</div>
+	</div>
+	<script>
+	-function(){
+		var rule_leftB=document.getElementById("main").children[1].children[2].children[0];
+		var rule_rightB=document.getElementById("main").children[1].children[2].children[1];
+		rule_leftB.onclick=function(){
+			window.location="FPMain/loginFail.html";
+		};
+		rule_rightB.onclick=function(){
+			window.location="FPMain/home.html";
+		};
+		
+
+	// 判断屏幕是竖屏还是横屏
+		var me=this;
+		me.screen_boo=true;
+		me.screen_box=document.getElementById("yue_screen_h");
+		me.findPosition=document.getElementById("main");
+		me.screenIs_h_or_s=function(){
+			// 用于灵活载入设备宽度
+			// me.screenCW=window.screen.availWidth/2;
+			if(window.orientation==180||window.orientation==0){
+				me.screen_boo=true;
+				me.screen_box.style["display"]="none";
+				me.findPosition.style["display"]="block";
+				// alert("素屏")
+			};
+			if((window.orientation==90||window.orientation==-90)&&me.screen_boo==true){
+				me.screen_boo=false;
+				// alert("横屏");
+				me.screen_box.style["display"]="block";
+				me.findPosition.style["display"]="none";
+				return false;
+			};
+
+		},
+		// 检查屏幕状态
+		window.addEventListener("orientationchange"in window?"orientationchange":"resize",me.screenIs_h_or_s,false);
+
+	}()
+	</script>
+</body>
+</html>

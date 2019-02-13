@@ -1,0 +1,168 @@
+/*home.css部分*/
+#fPosition_home_login{
+	width:100%;
+	position:relative;
+	height:100vh;
+	overflow:hidden;
+	max-width:640px;
+	min-width:300px;
+	margin:0 auto;
+
+}
+#fPosition_home_login > .home_pass{
+	position:absolute;
+	right:2rem;
+	top:2rem;
+	z-index:4;
+}
+#fPosition_home_login > .prove{
+	width:100%;
+	position:absolute;
+	z-index:2;
+	background:#fff;
+	display:none;
+}
+#fPosition_home_login > .prove > .next_thir{
+	margin-top:2rem;
+	width:6rem;
+	margin-left:80%;
+	border-radius:2px;
+}
+#fPosition_home_login > .prove > .re_get{
+	width:6rem;
+	position:absolute;
+	bottom:0;
+	left:9.2%;
+}
+#fPosition_home_login > .prove > .proveN{
+	width:100%;
+	height:3rem;
+}
+#fPosition_home_login > .prove > .proveN > ul{
+	width:100%;
+	height:3rem;
+}
+#fPosition_home_login > .prove > .proveN ul > li{
+	width:15%;
+	height:3rem;
+	float:left;
+	margin-left:1.42%;
+	border-bottom:1px solid #f40;
+}
+#fPosition_home_login > .prove > .proveN > ul > li > input{
+	width:100%;
+	height:100%;
+	font-size:3rem;
+	text-align:center;
+}
+#fPosition_home_login > .prove > .inputProve{
+	margin-top:30vh;
+	margin-left:2%;
+}
+#fPosition_home_login > .prove > .glyphicon_lt_thir{
+	margin-top:10px;
+	margin-left:10px;
+	font-size:2rem;
+	color:coral;
+	/*visibility:hidden;*/
+}
+#fPosition_home_login > .fPosition_home_login_phone{
+	width:100%;
+	position:absolute;
+	/*display:none;*/
+	z-index:3;
+	background:#fff;
+}
+#fPosition_home_login > .fPosition_home_login_password > .glyphicon_lt,#fPosition_home_login > .fPosition_home_login_phone > .glyphicon_lt{
+	margin-top:10px;
+	margin-left:10px;
+	font-size:2rem;
+	color:coral;
+	visibility:hidden;
+}
+#fPosition_home_login > .fPosition_home_login_password > input,#fPosition_home_login > .fPosition_home_login_phone > input{
+	width:70%;
+	margin-left:15%;
+	margin-top:30vh;
+	border-bottom:1px solid #f0f0f0;
+	padding-bottom:1rem;
+
+}
+#fPosition_home_login > .fPosition_home_login_password > .next,#fPosition_home_login > .fPosition_home_login_phone > .next{
+	width:70%;
+	border-radius:10px;
+	color:#fff;
+	margin-left:15%;
+	margin-top:2rem;
+	/*display:flex;
+	display:-webkit-flex;
+	align-items:center;
+	justify-content: center;*/
+	background:#5B5B5B;
+	text-align:center;
+}
+#fPosition_home_login > .fPosition_home_login_password{
+	width:100%;
+	position:absolute;
+	display:none;
+	z-index:1;
+	background:#fff;
+}
+/*其它登录方式*/
+#fPosition_home_login > .home_other_login{
+	width:100%;
+	margin-top:30px;
+	text-align:center;
+	border-top:1px solid #f0f0f0;
+	padding-top:0.8rem;
+	position:absolute;
+	top:333.5px;
+	text-align:center;
+}
+#fPosition_home_login > .home_other_login > span{
+	display:inline-block;
+	height:31px;
+}
+#fPosition_home_login > .home_other_login >	.img_main{
+	width:60%;
+	margin-left:20%;
+	margin-top:6px;
+	overflow:auto;
+}
+#fPosition_home_login > .home_other_login >	.img_main >:nth-child(1){
+	display:block;
+	width:50px;
+	height:50px;
+	float:left;
+}
+#fPosition_home_login > .home_other_login >	.img_main >:nth-child(2){
+	display:block;
+	width:50px;
+	height:50px;
+	float:right;
+}
+/*判断是横屏时的状态*/
+	#yue_screen_h{
+		z-index:100000;
+		width:100%;
+		height:100%;
+		background:#000;
+		position:absolute;
+		left:0;
+		top:0;
+		line-height:50vh;
+		display:none;
+	}
+	#yue_screen_h > .screen_bg{
+		width:100%;
+		height:100%;
+		position:absolute;
+		background:url('../home/img/screen_h.jpg') no-repeat;
+		background-size:100%;
+	}
+	#yue_screen_h > span{
+		color:#9b72ae;
+		position:relative;
+		font-size:2rem;
+		margin-left:55%;
+	}
